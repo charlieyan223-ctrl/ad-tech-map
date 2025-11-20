@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ad Tech Ecosystem Map</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;700&family=Inter:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+    <div class="app-container">
+        <header>
+            <div class="header-content">
+                <h1>Ad Tech Ecosystem <span class="version">v7.0</span></h1>
+                <p>Interactive Flow & Context Map <span class="attribution">by Charlie Yan</span></p>
+            </div>
+        </header>
+
+        <main>
+            <div id="viewport" class="viewport">
+                <div id="canvas" class="canvas">
+                    <svg id="connections-layer"></svg>
+                    <!-- Nodes will be injected here by script.js -->
+                </div>
+            </div>
+
+            <!-- Tour Controls -->
+            <div class="tour-controls" id="tour-controls">
+                <div class="tour-info">
+                    <span class="tour-step-count">Step <span id="step-current">0</span>/<span
+                            id="step-total">0</span></span>
+                    <p id="tour-text">Select a tour to begin exploring the ecosystem.</p>
+                </div>
+                <div class="tour-buttons" id="tour-start-buttons">
+                    <button id="btn-tour-demand" class="tour-btn primary">Start Demand Tour</button>
+                    <button id="btn-tour-supply" class="tour-btn primary">Start Supply Tour</button>
+                </div>
+                <div class="tour-buttons hidden" id="tour-nav-buttons">
+                    <button id="btn-prev" class="tour-btn">Previous</button>
+                    <button id="btn-play" class="tour-btn primary">▶ Auto Play</button>
+                    <button id="btn-next" class="tour-btn">Next</button>
+                    <button id="btn-exit" class="tour-btn secondary">Exit</button>
+                </div>
+            </div>
+
+            <div class="info-overlay" id="info-overlay">
+                <div class="info-card">
+                    <div class="info-header">
+                        <span id="info-type" class="badge">ENTITY</span>
+                        <button id="close-info" class="close-btn">×</button>
+                        <button id="clear-selection" class="clear-btn">Clear Selection</button>
+                        <h2 id="info-title">Title</h2>
+                    </div>
+                    <div class="info-body">
+                        <p id="info-desc">Description goes here...</p>
+
+                        <div id="info-relationships" class="relationships-section">
+                            <h4>Relationships</h4>
+                            <!-- Relationships injected here -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
